@@ -12,6 +12,7 @@
 
 
 ## Contributing
+* thanks to TheArkive & cocobelgica for Jxon_Load
 * thanks to AutoHotkey Community
 
 
