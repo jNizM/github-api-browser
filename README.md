@@ -5,10 +5,12 @@
 ## Features
 * Shows User stats
 * Shows Repos stats
+* Shows Releases with Downloads and Filenames
 
 
 ## Examples
 ![GitHubAPI-Browser](img/GitHubAPI-Browser.png)
+![GitHubAPI-Browser02](img/GitHubAPI-Browser02.png)
 
 
 ## Contributing
