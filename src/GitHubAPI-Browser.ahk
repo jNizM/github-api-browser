@@ -98,7 +98,7 @@ ED17 := Main.AddEdit("x+1 yp w160 0x802 BackgroundFBFBFB")
 LV01 := Main.AddListView("xm+512 ym+196 w300 h283 BackgroundFBFBFB -LV0x10 LV0x10000", ["Release", "Downloads", "Published"])
 LV01.OnEvent("DoubleClick", LV_DoubleClick)
 
-LV02 := Main.AddListView("xm+210 ym+489 w602 h119 BackgroundFBFBFB -LV0x10 LV0x10000", ["Name", "Size", "Uploaded"])
+LV02 := Main.AddListView("xm+210 ym+489 w602 h119 BackgroundFBFBFB -LV0x10 LV0x10000", ["FileName", "FileSize", "Uploaded"])
 
 Main.OnEvent("Close", ExitFunc)
 Main.Show()
@@ -202,8 +202,8 @@ LB_DoubleClick(CtrlObj, *)
 			ED13.Value := repos["language"]
 			ED14.Value := repos["license"]["spdx_id"]
 			ED15.Value := GetNumberFormatEx(repos["open_issues_count"])
-			ED16.Value := repos["created_at"]
-			ED17.Value := repos["updated_at"]
+			ED16.Value := SubStr(repos["created_at"], 1, -10)
+			ED17.Value := SubStr(repos["updated_at"], 1, -10)
 			GITHUB_RELEASE_API := SubStr(repos["releases_url"], 1, -5)
 		}
 	}
